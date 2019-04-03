@@ -1,0 +1,538 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+main {
+  max-width: 1800px;
+  padding: 5% 25px;
+  margin: auto;
+}
+main .grid-container,
+main .lottie-preview {
+  display: inline-block;
+}
+main .grid-container {
+  width: 45%;
+  position: relative;
+}
+main .grid-container #lottie-player,
+main .grid-container .lottie-grid {
+  position: absolute;
+}
+main .grid-container #lottie-player {
+  padding: 3.33%;
+  width: 100%;
+}
+main .grid-container .lottie-grid {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 750px) {
+  main .grid-container .lottie-grid {
+    display: none;
+  }
+}
+main .grid-container .lottie-grid .icon {
+  float: left;
+  width: 7%;
+  padding-bottom: 7%;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  margin: 1.07% 1.5% 1.75%;
+}
+main .grid-container .lottie-grid .icon:hover {
+  cursor: pointer;
+}
+main .lottie-preview {
+  width: 45%;
+  vertical-align: top;
+  float: right;
+}
+@media (max-width: 750px) {
+  main .lottie-preview {
+    width: 100%;
+  }
+}
+main .lottie-preview #preview {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  transform: translate3d(0, 0, 0);
+  text-align: center;
+}
+@media (max-width: 750px) {
+  main .lottie-preview #preview {
+    width: 80%;
+    height: auto;
+  }
+}
+main .lottie-preview form {
+  display: flex;
+  flex-direction: column;
+}
+main .lottie-preview form fieldset {
+  border: none;
+}
+main .lottie-preview form fieldset legend span {
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+main .lottie-preview form fieldset .form-edit,
+main .lottie-preview form fieldset .color-edit,
+main .lottie-preview form fieldset .scale-edit,
+main .lottie-preview form fieldset .stroke-edit,
+main .lottie-preview form fieldset .duration-edit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+  flex-direction: column;
+}
+main .lottie-preview form fieldset .form-edit span.field-labels,
+main .lottie-preview form fieldset .color-edit span.field-labels,
+main .lottie-preview form fieldset .scale-edit span.field-labels,
+main .lottie-preview form fieldset .stroke-edit span.field-labels,
+main .lottie-preview form fieldset .duration-edit span.field-labels {
+  display: flex;
+  justify-content: space-between;
+}
+main .lottie-preview form fieldset .form-edit label,
+main .lottie-preview form fieldset .color-edit label,
+main .lottie-preview form fieldset .scale-edit label,
+main .lottie-preview form fieldset .stroke-edit label,
+main .lottie-preview form fieldset .duration-edit label {
+  margin-right: 5px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range],
+main .lottie-preview form fieldset .color-edit input[type=range],
+main .lottie-preview form fieldset .scale-edit input[type=range],
+main .lottie-preview form fieldset .stroke-edit input[type=range],
+main .lottie-preview form fieldset .duration-edit input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .color-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]:focus,
+main .lottie-preview form fieldset .color-edit input[type=range]:focus,
+main .lottie-preview form fieldset .scale-edit input[type=range]:focus,
+main .lottie-preview form fieldset .stroke-edit input[type=range]:focus,
+main .lottie-preview form fieldset .duration-edit input[type=range]:focus {
+  outline: none;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .color-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .color-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-webkit-slider-thumb,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 1px;
+  cursor: pointer;
+  margin-top: -10px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-moz-range-thumb,
+main .lottie-preview form fieldset .color-edit input[type=range]::-moz-range-thumb,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-moz-range-thumb,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-moz-range-thumb,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 20px;
+  width: 1px;
+  cursor: pointer;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-ms-thumb,
+main .lottie-preview form fieldset .color-edit input[type=range]::-ms-thumb,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-ms-thumb,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-ms-thumb,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-ms-thumb {
+  border: 1px solid #000000;
+  height: 20px;
+  width: 1px;
+  cursor: pointer;
+}
+main .lottie-preview form fieldset .form-edit input,
+main .lottie-preview form fieldset .color-edit input,
+main .lottie-preview form fieldset .scale-edit input,
+main .lottie-preview form fieldset .stroke-edit input,
+main .lottie-preview form fieldset .duration-edit input {
+  width: 5ch;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 1em;
+  text-align: right;
+  padding: 0;
+  border: none;
+}
+main .lottie-preview form fieldset .form-edit input:focus,
+main .lottie-preview form fieldset .color-edit input:focus,
+main .lottie-preview form fieldset .scale-edit input:focus,
+main .lottie-preview form fieldset .stroke-edit input:focus,
+main .lottie-preview form fieldset .duration-edit input:focus {
+  outline-color: #000fff;
+  outline-style: solid;
+  outline-width: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-webkit-slider-runnable-track {
+  margin-right: 5px;
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #111111;
+  border-radius: 1.3px;
+  border: 1px solid #000000;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #111111;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-moz-range-track,
+main .lottie-preview form fieldset .color-edit input[type=range]::-moz-range-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-moz-range-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-moz-range-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-moz-range-track {
+  margin-right: 5px;
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #111111;
+  border-radius: 1.3px;
+  border: 1px solid #000000;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .color-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-ms-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-ms-track {
+  margin-right: 5px;
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-ms-fill-lower {
+  background: #111111;
+  border: 1px solid #000000;
+  border-radius: 2.6px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]:focus::-ms-fill-lower {
+  background: #111111;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]::-ms-fill-upper {
+  background: #111111;
+  border: 1px solid #000000;
+  border-radius: 2.6px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]:focus::-ms-fill-upper {
+  background: #111111;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#hueID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#hueID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#hueID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#hueID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#hueID::-webkit-slider-runnable-track {
+  background: -webkit-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  background: -moz-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#hueID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#hueID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#hueID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#hueID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#hueID:focus::-webkit-slider-runnable-track {
+  background: -webkit-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  background: -moz-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#hueID::-moz-range-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#hueID::-moz-range-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#hueID::-moz-range-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#hueID::-moz-range-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#hueID::-moz-range-track {
+  background: -webkit-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  background: -moz-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#hueID::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]#hueID::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]#hueID::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#hueID::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]#hueID::-ms-fill-lower {
+  background: -webkit-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  background: -moz-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#hueID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]#hueID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]#hueID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#hueID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]#hueID:focus::-ms-fill-lower {
+  background: -webkit-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  background: -moz-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#hueID::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]#hueID::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]#hueID::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#hueID::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]#hueID::-ms-fill-upper {
+  background: -webkit-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  background: -moz-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#hueID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]#hueID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]#hueID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#hueID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]#hueID:focus::-ms-fill-upper {
+  background: -webkit-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  background: -moz-linear-gradient(left, red, #ff2b00, #ff5500, #ff8000, #ffaa00, #ffd500, yellow, #d5ff00, #aaff00, #80ff00, #55ff00, #2bff00, lime, #00ff2b, #00ff55, #00ff80, #00ffaa, #00ffd5, aqua, #00d5ff, #00aaff, #0080ff, #0055ff, #002bff, blue, #2b00ff, #5500ff, #8000ff, #aa00ff, #d500ff, fuchsia, #ff00d5, #ff00aa, #ff0080, #ff0055, #ff002b, red);
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#saturationID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#saturationID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#saturationID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#saturationID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#saturationID::-webkit-slider-runnable-track {
+  background: transparent;
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#saturationID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#saturationID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#saturationID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#saturationID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#saturationID:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#saturationID::-moz-range-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#saturationID::-moz-range-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#saturationID::-moz-range-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#saturationID::-moz-range-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#saturationID::-moz-range-track {
+  background: transparent;
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#saturationID::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]#saturationID::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]#saturationID::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#saturationID::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]#saturationID::-ms-fill-lower {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#saturationID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]#saturationID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]#saturationID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#saturationID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]#saturationID:focus::-ms-fill-lower {
+  background: transparent;
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#saturationID::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]#saturationID::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]#saturationID::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#saturationID::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]#saturationID::-ms-fill-upper {
+  background: transparent;
+  border: 1px transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#saturationID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]#saturationID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]#saturationID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#saturationID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]#saturationID:focus::-ms-fill-upper {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#lightnessID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#lightnessID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#lightnessID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#lightnessID::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#lightnessID::-webkit-slider-runnable-track {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#lightnessID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#lightnessID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#lightnessID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#lightnessID:focus::-webkit-slider-runnable-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#lightnessID:focus::-webkit-slider-runnable-track {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#lightnessID::-moz-range-track,
+main .lottie-preview form fieldset .color-edit input[type=range]#lightnessID::-moz-range-track,
+main .lottie-preview form fieldset .scale-edit input[type=range]#lightnessID::-moz-range-track,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#lightnessID::-moz-range-track,
+main .lottie-preview form fieldset .duration-edit input[type=range]#lightnessID::-moz-range-track {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#lightnessID::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]#lightnessID::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]#lightnessID::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#lightnessID::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]#lightnessID::-ms-fill-lower {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#lightnessID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .color-edit input[type=range]#lightnessID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .scale-edit input[type=range]#lightnessID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#lightnessID:focus::-ms-fill-lower,
+main .lottie-preview form fieldset .duration-edit input[type=range]#lightnessID:focus::-ms-fill-lower {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#lightnessID::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]#lightnessID::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]#lightnessID::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#lightnessID::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]#lightnessID::-ms-fill-upper {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit input[type=range]#lightnessID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .color-edit input[type=range]#lightnessID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .scale-edit input[type=range]#lightnessID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .stroke-edit input[type=range]#lightnessID:focus::-ms-fill-upper,
+main .lottie-preview form fieldset .duration-edit input[type=range]#lightnessID:focus::-ms-fill-upper {
+  border: 1px transparent;
+  background: transparent;
+  height: 2px;
+}
+main .lottie-preview form fieldset .form-edit #visibleHue,
+main .lottie-preview form fieldset .form-edit #visibleLightness,
+main .lottie-preview form fieldset .form-edit #visibleSaturation,
+main .lottie-preview form fieldset .color-edit #visibleHue,
+main .lottie-preview form fieldset .color-edit #visibleLightness,
+main .lottie-preview form fieldset .color-edit #visibleSaturation,
+main .lottie-preview form fieldset .scale-edit #visibleHue,
+main .lottie-preview form fieldset .scale-edit #visibleLightness,
+main .lottie-preview form fieldset .scale-edit #visibleSaturation,
+main .lottie-preview form fieldset .stroke-edit #visibleHue,
+main .lottie-preview form fieldset .stroke-edit #visibleLightness,
+main .lottie-preview form fieldset .stroke-edit #visibleSaturation,
+main .lottie-preview form fieldset .duration-edit #visibleHue,
+main .lottie-preview form fieldset .duration-edit #visibleLightness,
+main .lottie-preview form fieldset .duration-edit #visibleSaturation {
+  height: 2px;
+  position: relative;
+  top: 4px;
+  margin: 0 2px;
+  z-index: -1;
+}
+main .lottie-preview form fieldset .form-edit #visibleLightness,
+main .lottie-preview form fieldset .color-edit #visibleLightness,
+main .lottie-preview form fieldset .scale-edit #visibleLightness,
+main .lottie-preview form fieldset .stroke-edit #visibleLightness,
+main .lottie-preview form fieldset .duration-edit #visibleLightness {
+  background: linear-gradient(to right, black, grey, lightgrey, white);
+}
+main .lottie-preview form fieldset .form-edit #visibleSaturation,
+main .lottie-preview form fieldset .color-edit #visibleSaturation,
+main .lottie-preview form fieldset .scale-edit #visibleSaturation,
+main .lottie-preview form fieldset .stroke-edit #visibleSaturation,
+main .lottie-preview form fieldset .duration-edit #visibleSaturation {
+  background: linear-gradient(to right, gray, #8c7373, #996666, #a65959, #b34d4d, #bf4040, #cc3333, #d92626, #e61a1a, #f20d0d, red);
+}
+main .lottie-preview form button {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1em;
+  border: none;
+  background: transparent;
+  align-self: flex-end;
+  padding-right: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+main .lottie-preview form button:hover {
+  cursor: pointer;
+}
+main .lottie-preview form button:focus {
+  outline-color: #000fff;
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+/*# sourceMappingURL=main.css.map */
