@@ -167,9 +167,9 @@ function setColor() {
   $saturationBar = $("#visibleSaturation"),
   $lightnessBar = $("#visibleLightness");
 
-  $(".rgb-display").text($colorrgba);
-  $(".hex-display").text($colorhex);
-  $(".hsl-display").text($hsl);
+  // $(".rgb-display").text($colorrgba);
+  // $(".hex-display").text($colorhex);
+  // $(".hsl-display").text($hsl);
 
   $fill.add($stroke).css({stroke: `${$hsl}`, fill: `${$hsl}`})
   $saturationBar.css(`background`, `linear-gradient(to right, hsl(${$hue}, 10%, 0%), hsl(${$hue}, 20%, 50%), hsl(${$hue}, 30%, 50%), hsl(${$hue}, 40%, 50%), hsl(${$hue}, 50%, 50%), hsl(${$hue}, 60%, 50%), hsl(${$hue}, 70%, 50%), hsl(${$hue}, 80%, 50%), hsl(${$hue}, 90%, 50%), hsl(${$hue}, 100%, 50%))`);
