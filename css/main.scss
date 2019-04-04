@@ -21,7 +21,7 @@ body {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-main { 
+main {
   max-width: 1800px;
   padding: 5% 25px;
   margin: auto;
@@ -90,6 +90,15 @@ main {
         height: auto;
       }
     }
+    .color-values {
+      padding: 0.75em;
+      display: flex;
+      justify-content: space-between;
+      span.hex-display {
+        text-transform: uppercase;
+      }
+    }
+
     form {
       display: flex;
       flex-direction: column;

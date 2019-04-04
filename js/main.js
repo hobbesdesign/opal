@@ -29,15 +29,18 @@ console.log(browserJSON);
 
 function editJSON(file) {
     // get color, stroke, scale, duration values from setColor() and setScaleStrokeDuration()
-    // do something with them here
-    // file.fr = $ $duration for example
     debugger;
 
     let $duration,
     $height,
     $width,
     $color;
-    
+
+    // file.fr = $duration;
+    // file.h = $height;
+    // file.w = $width;
+    // $color = $lottieColor
+
 }
 
 function setColor() {
@@ -164,9 +167,15 @@ function setColor() {
   $saturationBar = $("#visibleSaturation"),
   $lightnessBar = $("#visibleLightness");
 
+  $(".rgb-display").text($colorrgba);
+  $(".hex-display").text($colorhex);
+  $(".hsl-display").text($hsl);
+
   $fill.add($stroke).css({stroke: `${$hsl}`, fill: `${$hsl}`})
   $saturationBar.css(`background`, `linear-gradient(to right, hsl(${$hue}, 10%, 0%), hsl(${$hue}, 20%, 50%), hsl(${$hue}, 30%, 50%), hsl(${$hue}, 40%, 50%), hsl(${$hue}, 50%, 50%), hsl(${$hue}, 60%, 50%), hsl(${$hue}, 70%, 50%), hsl(${$hue}, 80%, 50%), hsl(${$hue}, 90%, 50%), hsl(${$hue}, 100%, 50%))`);
   $lightnessBar.css(`background`, `linear-gradient(to right, hsl(${$hue}, 100%, 0%), hsl(${$hue}, 100%, 20%), hsl(${$hue}, 100%, 30%), hsl(${$hue}, 100%, 40%), hsl(${$hue}, 100%, 50%), hsl(${$hue}, 100%, 60%), hsl(${$hue}, 100%, 70%), hsl(${$hue}, 100%, 80%),hsl(${$hue}, 100%, 90%), hsl(${$hue}, 100%, 100%))`);
+
+  return $lottieColor;
 
 }
 
