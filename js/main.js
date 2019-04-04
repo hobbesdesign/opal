@@ -10,8 +10,11 @@ function playFile(file) {
     autoplay: true,
     name: `${file.name} Animation`,
   });
+
+
+}
+function setName(file) {
   $(`#${file.id}`).attr(`data-name`, `${file.name}`);
-  // adjustTop();
 }
 
 function adjustTop() {
@@ -166,6 +169,7 @@ $(document).ready(function() {
 
 
   // lottieFiles.forEach(playFile);
+  lottieFiles.forEach(setName);
   playFile(gridJson)
   // add a .then(adjustTop();)
 
@@ -200,8 +204,5 @@ $(document).ready(function() {
     // lottieFiles.find(playFilePreview).then(setColor());
     lottieFiles.find(playFilePreview);
   })
-  // $(window).on('resize', function(){
-  //   adjustTop();
-  // });
 
 })
