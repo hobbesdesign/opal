@@ -19,15 +19,25 @@ function setName(file) {
 
 function createJSON(file) {
   $.getJSON(`json/${file.name}.json`, function(obj) {
-    console.log(obj);
+    // console.log(obj);
+    browserJSON.push(obj);
   });
-  browserJSON.push(obj);
-  debugger;
+  return browserJSON;
 }
 
-function adjustTop() {
-  let lottieHeight = $("#lottie-player").css("height");
-  $(".lottie-grid").css(`top`, `-${lottieHeight}`);
+console.log(browserJSON);
+
+function editJSON(file) {
+    // get color, stroke, scale, duration values from setColor() and setScaleStrokeDuration()
+    // do something with them here
+    // file.fr = $ $duration for example
+    debugger;
+
+    let $duration,
+    $height,
+    $width,
+    $color;
+    
 }
 
 function setColor() {
@@ -170,6 +180,8 @@ function setScaleStrokeDuration() {
 $('input').on('input', function() {
   setColor();
   setScaleStrokeDuration();
+
+  browserJSON.forEach(editJSON);
 });
 
 $(document).ready(function() {
