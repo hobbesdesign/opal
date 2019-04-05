@@ -239,15 +239,19 @@
                 <div class="form-edit">
                     <span class="field-labels">
                       <label for="hue">Hue</label>
-                      <input name="hueOutputName" id="hueOutputId"></input>
+                      <input name="hueOutputName" id="hueOutputId" oninput="hueID.value = hueOutputId.value"></input>
                     </span>
                     </br>
                     <input type="range" name="hue" id="hueID" min="0" max="360" value="0" required oninput="hueOutputId.value = hue.value" />
+                    <form>
+                    <div>
+                    </div>
+                  </form>
                 </div>
                 <div class="form-edit">
                     <span class="field-labels">
                       <label for="saturation">Saturation</label>
-                      <span><input name="saturationOutputName" id="saturationOutputId"></input>%</span>
+                      <span><input name="saturationOutputName" id="saturationOutputId" oninput="saturationID.value = saturationOutputId.value"></input>%</span>
                     </span>
                   </br>
                   <div id="visibleSaturation"></div>
@@ -256,7 +260,7 @@
                 <div class="form-edit">
                   <span class="field-labels">
                     <label for="lightness">Lightness</label>
-                    <span><input name="lightnessOutputName" id="lightnessOutputId"></input>%</span>
+                    <span><input name="lightnessOutputName" id="lightnessOutputId" oninput="lightnessID.value = lightnessOutputId.value"></input>%</span>
                   </span>
                   </br>
                   <div id="visibleLightness"></div>
@@ -265,7 +269,7 @@
               <div class="scale-edit">
                 <span class="field-labels">
                   <label for="scale">Scale</label>
-                  <span><input name="scaleOutputName" id="scaleOutputId"></input>px</span>
+                  <span><input name="scaleOutputName" id="scaleOutputId" oninput="scale.value = scaleOutputId.value"></input>px</span>
                 </span>
                 </br>
                 <input type="range" name="scale" id="scale" required min="0" max="48" oninput="scaleOutputId.value = scale.value"/>
@@ -273,7 +277,7 @@
               <div class="stroke-edit">
                 <span class="field-labels">
                   <label for="stroke">Stroke</label>
-                  <span><input name="strokeOutputName" id="strokeOutputId"></input>pt</span>
+                  <span><input name="strokeOutputName" id="strokeOutputId" oninput="stroke.value = strokeOutputId.value"></input>pt</span>
                 </span>
                 </br>
                 <input type="range" name="stroke" id="stroke" required min="0" max="24" oninput="strokeOutputId.value = stroke.value"/>
@@ -281,7 +285,7 @@
               <div class="duration-edit">
                 <span class="field-labels">
                   <label for="duration">Duration</label>
-                  <span><input name="durationOutputName" id="durationOutputId"></input>ms</span>
+                  <span><input name="durationOutputName" id="durationOutputId" oninput="duration.value = durationOutputId.value"></input>ms</span>
                 </span>
                 </br>
                 <input type="range" name="duration" id="duration" placeholder="foo@bar.com" required min="100" max="5000"  oninput="durationOutputId.value = duration.value"/>
