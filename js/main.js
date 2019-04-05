@@ -27,21 +27,31 @@ function createJSON(file) {
 
 console.log(browserJSON);
 
-function editJSON(file) {
+function editJSON(file, lottieColor, scaleStrokeDuration) {
     // get color, stroke, scale, duration values from setColor() and setScaleStrokeDuration()
     debugger;
 
     let $duration,
     $height,
     $width,
-    $color;
+    $color = lottieColor;
+
+    // scaleStrokeDuration is an array, break down those values and apply height, width,
+    // and do some calculation for the duration to turn it into frames per second
 
     // file.fr = $duration;
     // file.h = $height;
     // file.w = $width;
-    // $color = $lottieColor
 
+    // layers[i].shapes[j].it[k].c.k = [
+    //       `${lottieR}`,
+    //       `${lottieG}`,
+    //       `${lottieB}`,
+    //       1
+    //     ];
 }
+
+
 
 function setColor() {
   let $hue = $("#hueID").val(),
@@ -177,6 +187,8 @@ function setColor() {
 
   return $lottieColor;
 
+
+
 }
 
 function setScaleStrokeDuration() {
@@ -184,13 +196,17 @@ function setScaleStrokeDuration() {
   $stroke = `${$("#stroke").val()}pt`,
   $duration = `${$("#duration").val()}ms`;
 
+  return [$scale, $stroke, $duration]
+
 }
 
 $('input').on('input', function() {
-  setColor();
-  setScaleStrokeDuration();
+  let lottieColor = setColor(),
+  scaleStrokeDuration = setScaleStrokeDuration();
 
-  browserJSON.forEach(editJSON);
+  browserJSON.forEach(function(file) {
+    editJSON(file, lottieColor, scaleStrokeDuration);
+  });
 });
 
 $(document).ready(function() {
