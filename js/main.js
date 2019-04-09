@@ -30,6 +30,7 @@ function createJSON(file) {
 
 function editJSON(file, lottieColor, scaleStrokeDuration) {
     file.op = 30;
+
     let $height,
     $width,
     $color = lottieColor,
@@ -38,97 +39,97 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
     $duration = scaleStrokeDuration[2].replace("ms",""),
     $framerate = (file.op/$duration)*1000;
 
-
-    Number($framerate.toFixed(2));
-    debugger;
     file.fr = $framerate.toFixed(2);
 
-    debugger;
     // file.h = $height;
     // file.w = $width;
 
-    // layers[i].shapes[j].it[k].c.k = [
+    // Current JSON paths:
+    switch (file.nm) {
+      case "Cart_Build_03":
 
-    // Cart_Build_03
-    // file.layers[1].shapes[0].it[1].c.k
-    // file.layers[1].shapes[1].it[1].c.k
-    // file.layers[1].shapes[2].it[1].c.k
-    // file.layers[1].shapes[3].it[1].c.k
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[1].it[1].c.k = $color;
+          file.layers[1].shapes[2].it[1].c.k = $color;
+          file.layers[1].shapes[3].it[1].c.k = $color;
+          debugger;
+        break;
+      case "Edit_Build_02":
 
-    // Edit_Build_02
-    // file.layers[2].shapes[0].it[1].c.k
-    // file.layers[3].shapes[0].it[1].c.k
-    // file.layers[4].shapes[0].it[1].c.k
-    // file.layers[5].shapes[0].it[1].c.k
-    // file.layers[6].shapes[0].it[1].c.k
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[6].shapes[0].it[1].c.k = $color;
+          debugger;
+        break;
+      case "Folder_Build_03":
 
-    // Folder_Build_03
-    // file.layers[1].shapes[1].c.k
-    // file.layers[2].shapes[1].c.k
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[2].shapes[1].c.k = $color;
+          debugger;
+        break;
+      case "Garbage_Build_05":
 
-    // Garbage_Build_05
-    // file.layers[1].shapes[0].it[1].c.k
-    // file.layers[1].shapes[1].it[1].c.k
-    // file.layers[1].shapes[2].it[1].c.k
-    // file.layers[1].shapes[3].it[1].c.k
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[1].it[1].c.k = $color;
+          file.layers[1].shapes[2].it[1].c.k = $color;
+          file.layers[1].shapes[3].it[1].c.k = $color;
+          debugger;
+        break;
+      case "Heart_Build_03":
 
-    // Heart_Build_03
-    // file.layers[1].shapes[1].c.k
+          file.layers[1].shapes[1].c.k = $color;
+          debugger;
+        break;
+      case "Home_Build_06":
 
-    // Home_Build_06
-    // file.layers[1].shapes[0].it[1].c.k
-    // file.layers[2].shapes[0].it[1].c.k
-    // file.layers[3].shapes[0].it[1].c.k
-    // file.layers[4].shapes[0].it[1].c.k
-    // file.layers[5].shapes[0].it[1].c.k
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          debugger;
+        break;
+      case "Laptop_Build_04":
 
-    // Laptop_Build_04
-    // file.layers[2].shapes[0].it[1].c.k
-    // file.layers[2].shapes[1].it[1].c.k
-    // file.layers[3].shapes[0].it[1].c.k
-    // file.layers[3].shapes[1].it[1].c.k
-    // file.layers[3].shapes[0].it[1].c.k
-    // file.layers[3].shapes[1].it[1].c.k
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[1].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[1].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[1].it[1].c.k = $color;
+          debugger;
+        break;
+      case "Printer_Build_02":
 
-    // Printer_Build_02
-    // file.layers[2].shapes[1].c.k
-    // file.layers[4].shapes[0].it[1].c.k
-    // file.layers[5].shapes[0].it[1].c.k
-    // file.layers[6].shapes[0].it[1].c.k
-    //
-    // Redo_Build
-    // file.layers[2].shapes[0].it[1].c.k
-    // file.layers[3].shapes[0].it[1].c.k
-    //
-    // Repeat_Build
-    // file.layers[1].shapes[0].it[1].c.k
-    // file.layers[3].shapes[0].it[1].c.k
-    // file.layers[4].shapes[0].it[1].c.k
-    // file.layers[5].shapes[0].it[1].c.k
-    // file.layers[7].shapes[0].it[1].c.k
-    // file.layers[8].shapes[0].it[1].c.k
-    // file.layers[9].shapes[0].it[1].c.k
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[6].shapes[0].it[1].c.k = $color;
+          debugger;
+        break;
+      case "Redo_Build_02":
 
-    Cart_Build
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          debugger;
+        break;
+      case "Repeat_Build_02":
 
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[7].shapes[0].it[1].c.k = $color;
+          file.layers[8].shapes[0].it[1].c.k = $color;
+          file.layers[9].shapes[0].it[1].c.k = $color;
+          debugger;
+        break;
 
+      default:
 
-
-
-
-
-
-
-
-
-
-
-
-    //       `${lottieR}`,
-    //       `${lottieG}`,
-    //       `${lottieB}`,
-    //       1
-    //     ];
+    }
 }
 
 
