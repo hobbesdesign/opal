@@ -255,7 +255,7 @@
                     </span>
                   </br>
                   <div id="visibleSaturation"></div>
-                  <input type="range" name="saturation" id="saturationID" min="0" max="100" steps="100" value="100" required oninput="saturationOutputId.value = saturation.value" />
+                  <input type="range" name="saturation" id="saturationID" min="0" max="100" value="100" steps="100" required oninput="saturationOutputId.value = saturation.value" />
                 </div>
                 <div class="form-edit">
                   <span class="field-labels">
@@ -264,7 +264,7 @@
                   </span>
                   </br>
                   <div id="visibleLightness"></div>
-                  <input type="range" name="lightness" id="lightnessID" min="0" max="100" steps="100" required oninput="lightnessOutputId.value = lightness.value" />
+                  <input type="range" name="lightness" id="lightnessID" min="0" max="100" value="50" steps="100" required oninput="lightnessOutputId.value = lightness.value" />
                 </div>
               <div class="scale-edit">
                 <span class="field-labels">
@@ -272,7 +272,7 @@
                   <span><input name="scaleOutputName" id="scaleOutputId" oninput="scale.value = scaleOutputId.value"></input>px</span>
                 </span>
                 </br>
-                <input type="range" name="scale" id="scale" required min="0" max="48" oninput="scaleOutputId.value = scale.value"/>
+                <input type="range" name="scale" id="scale" required min="24" max="1080" value="24" oninput="scaleOutputId.value = scale.value"/>
               </div>
               <div class="stroke-edit">
                 <span class="field-labels">
@@ -280,7 +280,7 @@
                   <span><input name="strokeOutputName" id="strokeOutputId" oninput="stroke.value = strokeOutputId.value"></input>pt</span>
                 </span>
                 </br>
-                <input type="range" name="stroke" id="stroke" required min="0" max="24" oninput="strokeOutputId.value = stroke.value"/>
+                <input type="range" name="stroke" id="stroke" required min="1" max="90" oninput="strokeOutputId.value = stroke.value"/>
               </div>
               <div class="duration-edit">
                 <span class="field-labels">
@@ -288,7 +288,7 @@
                   <span><input name="durationOutputName" id="durationOutputId" oninput="duration.value = durationOutputId.value"></input>ms</span>
                 </span>
                 </br>
-                <input type="range" name="duration" id="duration" placeholder="foo@bar.com" required min="100" max="5000"  oninput="durationOutputId.value = duration.value"/>
+                <input type="range" name="duration" id="duration" required min="200" max="3000" value="500"  oninput="durationOutputId.value = duration.value"/>
               </div>
             </fieldset>
               <button type="submit">Render <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></button>

@@ -18,8 +18,6 @@ function setName(file) {
 }
 
 function createJSON(file) {
-  // could also just use a map() instead of a forEach and it will include pushing itinto browserJSON
-  // const browserJSON = lottieFiles.map(createJSON);
   $.getJSON(`json/${file.name}.json`, function(obj) {
     browserJSON.push(obj);
     return obj;
@@ -31,11 +29,11 @@ function createJSON(file) {
 function editJSON(file, lottieColor, scaleStrokeDuration) {
     file.op = 30;
 
-    let $height,
+    let $scale = scaleStrokeDuration[0],
+    $stroke = (scaleStrokeDuration[1].replace("pt",""))*20,
+    $height,
     $width,
     $color = lottieColor,
-    $scale = scaleStrokeDuration[0],
-    $stroke = scaleStrokeDuration[1],
     $duration = scaleStrokeDuration[2].replace("ms",""),
     $framerate = (file.op/$duration)*1000;
 
@@ -47,76 +45,96 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
     // Current JSON paths:
     switch (file.nm) {
       case "Cart_Build_03":
-
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[1].shapes[1].it[1].c.k = $color;
           file.layers[1].shapes[2].it[1].c.k = $color;
           file.layers[1].shapes[3].it[1].c.k = $color;
-          debugger;
+          file.layers[1].shapes[7].w.k = $stroke;
+          // debugger;
         break;
       case "Edit_Build_02":
-
           file.layers[2].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
           file.layers[5].shapes[0].it[1].c.k = $color;
           file.layers[6].shapes[0].it[1].c.k = $color;
-          debugger;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[6].shapes[0].it[1].w.k = $stroke;
+          // debugger;
         break;
       case "Folder_Build_03":
-
           file.layers[1].shapes[1].c.k = $color;
           file.layers[2].shapes[1].c.k = $color;
-          debugger;
+          file.layers[1].shapes[1].w.k = $stroke;
+          file.layers[2].shapes[1].w.k = $stroke;
+          // debugger;
         break;
       case "Garbage_Build_05":
-
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[1].shapes[1].it[1].c.k = $color;
           file.layers[1].shapes[2].it[1].c.k = $color;
           file.layers[1].shapes[3].it[1].c.k = $color;
-          debugger;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[1].shapes[1].it[1].w.k = $stroke;
+          file.layers[1].shapes[2].it[1].w.k = $stroke;
+          file.layers[1].shapes[3].it[1].w.k = $stroke;
+          // debugger;
         break;
       case "Heart_Build_03":
-
           file.layers[1].shapes[1].c.k = $color;
-          debugger;
+          file.layers[1].shapes[1].w.k = $stroke;
+          // debugger;
         break;
       case "Home_Build_06":
-
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[2].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
           file.layers[5].shapes[0].it[1].c.k = $color;
-          debugger;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          // debugger;
         break;
       case "Laptop_Build_04":
-
           file.layers[2].shapes[0].it[1].c.k = $color;
           file.layers[2].shapes[1].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[1].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[1].it[1].c.k = $color;
-          debugger;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[1].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[1].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[1].it[1].w.k = $stroke;
+          // debugger;
         break;
       case "Printer_Build_02":
-
           file.layers[2].shapes[1].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
           file.layers[5].shapes[0].it[1].c.k = $color;
           file.layers[6].shapes[0].it[1].c.k = $color;
-          debugger;
+          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[6].shapes[0].it[1].w.k = $stroke;
+          // debugger;
         break;
       case "Redo_Build_02":
-
           file.layers[2].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
-          debugger;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          // debugger;
         break;
       case "Repeat_Build_02":
-
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
@@ -124,12 +142,20 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[7].shapes[0].it[1].c.k = $color;
           file.layers[8].shapes[0].it[1].c.k = $color;
           file.layers[9].shapes[0].it[1].c.k = $color;
-          debugger;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[7].shapes[0].it[1].w.k = $stroke;
+          file.layers[8].shapes[0].it[1].w.k = $stroke;
+          file.layers[9].shapes[0].it[1].w.k = $stroke;
+          // debugger;
         break;
 
       default:
 
     }
+
 }
 
 
@@ -270,8 +296,28 @@ function setColor() {
 
 function setScaleStrokeDuration() {
   let $scale = `${$("#scale").val()}px`,
+  $maxstroke = (($("#scale").val()) / 12).toFixed(2);
+  $maxscale = (($("#stroke").val()) * 12),
   $stroke = `${$("#stroke").val()}pt`,
-  $duration = `${$("#duration").val()}ms`;
+  $duration = `${$("#duration").val()}ms`;;
+
+  if ($("#scale").val() < $("#stroke").val() * 11.99) {
+    // debugger;
+    $("#scale").val($maxscale);
+
+    // debugger;
+  }
+  if ($("#stroke").val() > $("#scale").val() / 11.99) {
+    // debugger;
+    $(`#stroke`).val($maxstroke);
+    // debugger;
+  }
+
+
+  console.log(`the scale value is ${$("#scale").val()}`);
+  console.log(`the stroke value is ${$("#stroke").val()}`);
+  console.log('-------------------------------------')
+
 
   return [$scale, $stroke, $duration]
 
