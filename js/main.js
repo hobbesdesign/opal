@@ -39,11 +39,91 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
     $framerate = (file.op/$duration)*1000;
 
 
+    Number($framerate.toFixed(2));
+    debugger;
     file.fr = $framerate.toFixed(2);
+
+    debugger;
     // file.h = $height;
     // file.w = $width;
 
     // layers[i].shapes[j].it[k].c.k = [
+
+    // Cart_Build_03
+    // file.layers[1].shapes[0].it[1].c.k
+    // file.layers[1].shapes[1].it[1].c.k
+    // file.layers[1].shapes[2].it[1].c.k
+    // file.layers[1].shapes[3].it[1].c.k
+
+    // Edit_Build_02
+    // file.layers[2].shapes[0].it[1].c.k
+    // file.layers[3].shapes[0].it[1].c.k
+    // file.layers[4].shapes[0].it[1].c.k
+    // file.layers[5].shapes[0].it[1].c.k
+    // file.layers[6].shapes[0].it[1].c.k
+
+    // Folder_Build_03
+    // file.layers[1].shapes[1].c.k
+    // file.layers[2].shapes[1].c.k
+
+    // Garbage_Build_05
+    // file.layers[1].shapes[0].it[1].c.k
+    // file.layers[1].shapes[1].it[1].c.k
+    // file.layers[1].shapes[2].it[1].c.k
+    // file.layers[1].shapes[3].it[1].c.k
+
+    // Heart_Build_03
+    // file.layers[1].shapes[1].c.k
+
+    // Home_Build_06
+    // file.layers[1].shapes[0].it[1].c.k
+    // file.layers[2].shapes[0].it[1].c.k
+    // file.layers[3].shapes[0].it[1].c.k
+    // file.layers[4].shapes[0].it[1].c.k
+    // file.layers[5].shapes[0].it[1].c.k
+
+    // Laptop_Build_04
+    // file.layers[2].shapes[0].it[1].c.k
+    // file.layers[2].shapes[1].it[1].c.k
+    // file.layers[3].shapes[0].it[1].c.k
+    // file.layers[3].shapes[1].it[1].c.k
+    // file.layers[3].shapes[0].it[1].c.k
+    // file.layers[3].shapes[1].it[1].c.k
+
+    // Printer_Build_02
+    // file.layers[2].shapes[1].c.k
+    // file.layers[4].shapes[0].it[1].c.k
+    // file.layers[5].shapes[0].it[1].c.k
+    // file.layers[6].shapes[0].it[1].c.k
+    //
+    // Redo_Build
+    // file.layers[2].shapes[0].it[1].c.k
+    // file.layers[3].shapes[0].it[1].c.k
+    //
+    // Repeat_Build
+    // file.layers[1].shapes[0].it[1].c.k
+    // file.layers[3].shapes[0].it[1].c.k
+    // file.layers[4].shapes[0].it[1].c.k
+    // file.layers[5].shapes[0].it[1].c.k
+    // file.layers[7].shapes[0].it[1].c.k
+    // file.layers[8].shapes[0].it[1].c.k
+    // file.layers[9].shapes[0].it[1].c.k
+
+    Cart_Build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //       `${lottieR}`,
     //       `${lottieG}`,
     //       `${lottieB}`,
