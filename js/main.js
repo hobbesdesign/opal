@@ -46,9 +46,6 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
     file.h = $height;
     file.w = $height;
 
-    // file.h = $height;
-    // file.w = $width;
-
     // Current JSON paths:
     switch (file.nm) {
       case "Cart_Build_03":
@@ -232,12 +229,13 @@ function setColor() {
     r = Math.round((r + m) * 255);
     g = Math.round((g + m) * 255);
     b = Math.round((b + m) * 255);
+
     let r_converted = (r/255).toFixed(2),
     g_converted = (g/255).toFixed(2),
     b_converted = (b/255).toFixed(2),
-    lottieR = parseFloat(lottieR),
-    lottieG = parseFloat(lottieG),
-    lottieB = parseFloat(lottieB);
+    lottieR = parseFloat(r_converted),
+    lottieG = parseFloat(g_converted),
+    lottieB = parseFloat(b_converted);
 
     return [lottieR,lottieG,lottieB, 1];
 
