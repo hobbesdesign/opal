@@ -325,6 +325,7 @@ $("#render").click(function(){
   });
   // console.log(browserJSON);
   browserJSON.forEach(createJSON);
+  console.log(exportJSON);
 
 })
 
