@@ -277,10 +277,11 @@
               <div class="stroke-edit">
                 <span class="field-labels">
                   <label for="stroke">Stroke</label>
-                  <span><input name="strokeOutputName" id="strokeOutputId" oninput="stroke.value = strokeOutputId.value"></input>pt</span>
+                  <span><input name="strokeOutputName" id="strokeOutputId" oninput="stroke.value = strokeOutputId.value" onchange="stroke.value = strokeOutputId.value"></input>pt</span>
                 </span>
                 </br>
-                <input type="range" name="stroke" id="stroke" required min="1" max="90" oninput="strokeOutputId.value = stroke.value"/>
+                <input type="range" name="stroke" id="stroke" required min="1" max="90" oninput="strokeOutputId.value = stroke.value" onchange="strokeOutputId.value = stroke.value"/>
+
               </div>
               <div class="duration-edit">
                 <span class="field-labels">
