@@ -27,7 +27,7 @@ function makeObject(file) {
 function createJSON(file) {
   let json = JSON.stringify(file);
   exportJSON.push(json);
-  console.log(exportJSON);
+  return json;
 }
 
 
