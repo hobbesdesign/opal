@@ -40,7 +40,6 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
 
     $framerate = Math.round($framerate * 1e2) / 1e2;
 
-    // file.fr = $framerate.toFixed(2);
     file.fr = $framerate;
     file.layers[0].ks["s"].k = $jsonsize;
     file.h = $height;
@@ -54,7 +53,6 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[1].shapes[2].it[1].c.k = $color;
           file.layers[1].shapes[3].it[1].c.k = $color;
           file.layers[1].shapes[7].w.k = $stroke;
-          // debugger;
         break;
       case "Edit_Build_02":
           file.layers[2].shapes[0].it[1].c.k = $color;
@@ -67,14 +65,12 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[4].shapes[0].it[1].w.k = $stroke;
           file.layers[5].shapes[0].it[1].w.k = $stroke;
           file.layers[6].shapes[0].it[1].w.k = $stroke;
-          // debugger;
         break;
       case "Folder_Build_03":
           file.layers[1].shapes[1].c.k = $color;
           file.layers[2].shapes[1].c.k = $color;
           file.layers[1].shapes[1].w.k = $stroke;
           file.layers[2].shapes[1].w.k = $stroke;
-          // debugger;
         break;
       case "Garbage_Build_05":
           file.layers[1].shapes[0].it[1].c.k = $color;
@@ -85,12 +81,10 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[1].shapes[1].it[1].w.k = $stroke;
           file.layers[1].shapes[2].it[1].w.k = $stroke;
           file.layers[1].shapes[3].it[1].w.k = $stroke;
-          // debugger;
         break;
       case "Heart_Build_03":
           file.layers[1].shapes[1].c.k = $color;
           file.layers[1].shapes[1].w.k = $stroke;
-          // debugger;
         break;
       case "Home_Build_06":
           file.layers[1].shapes[0].it[1].c.k = $color;
@@ -103,7 +97,6 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[3].shapes[0].it[1].w.k = $stroke;
           file.layers[4].shapes[0].it[1].w.k = $stroke;
           file.layers[5].shapes[0].it[1].w.k = $stroke;
-          // debugger;
         break;
       case "Laptop_Build_04":
           file.layers[2].shapes[0].it[1].c.k = $color;
@@ -118,7 +111,6 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[3].shapes[1].it[1].w.k = $stroke;
           file.layers[3].shapes[0].it[1].w.k = $stroke;
           file.layers[3].shapes[1].it[1].w.k = $stroke;
-          // debugger;
         break;
       case "Printer_Build_02":
           file.layers[2].shapes[1].c.k = $color;
@@ -129,14 +121,12 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[4].shapes[0].it[1].w.k = $stroke;
           file.layers[5].shapes[0].it[1].w.k = $stroke;
           file.layers[6].shapes[0].it[1].w.k = $stroke;
-          // debugger;
         break;
       case "Redo_Build_02":
           file.layers[2].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[2].shapes[0].it[1].w.k = $stroke;
           file.layers[3].shapes[0].it[1].w.k = $stroke;
-          // debugger;
         break;
       case "Repeat_Build_02":
           file.layers[1].shapes[0].it[1].c.k = $color;
@@ -153,13 +143,11 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
           file.layers[7].shapes[0].it[1].w.k = $stroke;
           file.layers[8].shapes[0].it[1].w.k = $stroke;
           file.layers[9].shapes[0].it[1].w.k = $stroke;
-          // debugger;
         break;
 
       default:
 
     }
-    debugger;
 }
 
 
@@ -330,6 +318,7 @@ $("#render").click(function(){
   browserJSON.forEach(function(file) {
     editJSON(file, lottieColor, scaleStrokeDuration);
   });
+
 })
 
 $(document).ready(function() {
