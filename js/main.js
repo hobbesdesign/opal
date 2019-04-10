@@ -31,13 +31,20 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
 
     let $scale = scaleStrokeDuration[0],
     $stroke = (scaleStrokeDuration[1].replace("pt",""))*20,
-    $height,
-    $width,
+    $height = parseInt(scaleStrokeDuration[0].replace("px","")),
+    $outputheight = (($height/24)*100).toFixed(2),
+    $jsonsize = [$outputheight, $outputheight, 100],
     $color = lottieColor,
     $duration = scaleStrokeDuration[2].replace("ms",""),
-    $framerate = (file.op/$duration)*1000;
+    $framerate = parseFloat(((file.op/$duration)*1000), 10);
 
-    file.fr = $framerate.toFixed(2);
+    $framerate = Math.round($framerate * 1e2) / 1e2;
+
+    // file.fr = $framerate.toFixed(2);
+    file.fr = $framerate;
+    file.layers[0].ks["s"].k = $jsonsize;
+    file.h = $height;
+    file.w = $height;
 
     // file.h = $height;
     // file.w = $width;
@@ -155,7 +162,7 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
       default:
 
     }
-
+    debugger;
 }
 
 
@@ -199,7 +206,6 @@ function setColor() {
   }
 
   function rgbatolottie(h,s,l){
-    // Must be fractions of 1
     s /= 100;
     l /= 100;
 
@@ -226,11 +232,14 @@ function setColor() {
     r = Math.round((r + m) * 255);
     g = Math.round((g + m) * 255);
     b = Math.round((b + m) * 255);
-    let lottieR = (r/255).toFixed(2);
-    let lottieG = (g/255).toFixed(2);
-    let lottieB = (b/255).toFixed(2);
+    let r_converted = (r/255).toFixed(2),
+    g_converted = (g/255).toFixed(2),
+    b_converted = (b/255).toFixed(2),
+    lottieR = parseFloat(lottieR),
+    lottieG = parseFloat(lottieG),
+    lottieB = parseFloat(lottieB);
 
-    return `[${lottieR},${lottieG},${lottieB}, 1]`;
+    return [lottieR,lottieG,lottieB, 1];
 
   }
 
@@ -315,10 +324,15 @@ $('input').on('input', function() {
   let lottieColor = setColor(),
   scaleStrokeDuration = setScaleStrokeDuration();
 
+});
+
+$("#render").click(function(){
+  let lottieColor = setColor(),
+  scaleStrokeDuration = setScaleStrokeDuration();
   browserJSON.forEach(function(file) {
     editJSON(file, lottieColor, scaleStrokeDuration);
   });
-});
+})
 
 $(document).ready(function() {
 
