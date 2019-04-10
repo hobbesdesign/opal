@@ -78,6 +78,14 @@ main .lottie-preview #preview {
     height: auto;
   }
 }
+main .lottie-preview .color-values {
+  padding: 0.75em;
+  display: flex;
+  justify-content: space-between;
+}
+main .lottie-preview .color-values span.hex-display {
+  text-transform: uppercase;
+}
 main .lottie-preview form {
   display: flex;
   flex-direction: column;

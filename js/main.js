@@ -1,5 +1,7 @@
 const lottieFiles = [{ name: "Cart_Build", id: "icon-1"},{ name: "Edit_Build", id: "icon-2"},{ name: "Folder_Build", id: "icon-3"},{ name: "Garbage_Build", id: "icon-4"},{ name: "Heart_Build", id: "icon-5"},{ name: "Home_Build", id: "icon-6"},{ name: "Laptop_Build", id: "icon-7"},{ name: "Printer_Build", id: "icon-8"},{ name: "Redo_Build", id: "icon-9"},{ name: "Repeat_Build", id: "icon-10"},{ name: "Cart_Build copy", id: "icon-11"},{ name: "Edit_Build copy", id: "icon-12"},{ name: "Folder_Build copy", id: "icon-13"},{ name: "Garbage_Build copy", id: "icon-14"},{ name: "Heart_Build copy", id: "icon-15"},{ name: "Home_Build copy", id: "icon-16"},{ name: "Laptop_Build copy", id: "icon-17"},{ name: "Printer_Build copy", id: "icon-18"},{ name: "Redo_Build copy", id: "icon-19"},{ name: "Repeat_Build copy", id: "icon-20"},{ name: "Cart_Build copy 2", id: "icon-21"},{ name: "Edit_Build copy 2", id: "icon-22"},{ name: "Folder_Build copy 2", id: "icon-23"},{ name: "Garbage_Build copy 2", id: "icon-24"},{ name: "Heart_Build copy 2", id: "icon-25"},{ name: "Home_Build copy 2", id: "icon-26"},{ name: "Laptop_Build copy 2", id: "icon-27"},{ name: "Printer_Build copy 2", id: "icon-28"},{ name: "Redo_Build copy 2", id: "icon-29"},{ name: "Repeat_Build copy 2", id: "icon-30"},{ name: "Cart_Build copy 3", id: "icon-31"},{ name: "Edit_Build copy 3", id: "icon-32"},{ name: "Folder_Build copy 3", id: "icon-33"},{ name: "Garbage_Build copy 3", id: "icon-34"},{ name: "Heart_Build copy 3", id: "icon-35"},{ name: "Home_Build copy 3", id: "icon-36"},{ name: "Laptop_Build copy 3", id: "icon-37"},{ name: "Printer_Build copy 3", id: "icon-38"},{ name: "Redo_Build copy 3", id: "icon-39"},{ name: "Repeat_Build copy 3", id: "icon-40"},{ name: "Cart_Build copy 4", id: "icon-41"},{ name: "Edit_Build copy 4", id: "icon-42"},{ name: "Folder_Build copy 4", id: "icon-43"},{ name: "Garbage_Build copy 4", id: "icon-44"},{ name: "Heart_Build copy 4", id: "icon-45"},{ name: "Home_Build copy 4", id: "icon-46"},{ name: "Laptop_Build copy 4", id: "icon-47"},{ name: "Printer_Build copy 4", id: "icon-48"},{ name: "Redo_Build copy 4", id: "icon-49"},{ name: "Repeat_Build copy 4", id: "icon-50"},{ name: "Cart_Build copy 5", id: "icon-51"},{ name: "Edit_Build copy 5", id: "icon-52"},{ name: "Folder_Build copy 5", id: "icon-53"},{ name: "Garbage_Build copy 5", id: "icon-54"},{ name: "Heart_Build copy 5", id: "icon-55"},{ name: "Home_Build copy 5", id: "icon-56"},{ name: "Laptop_Build copy 5", id: "icon-57"},{ name: "Printer_Build copy 5", id: "icon-58"},{ name: "Redo_Build copy 5", id: "icon-59"},{ name: "Repeat_Build copy 5", id: "icon-60"},{ name: "Cart_Build copy 6", id: "icon-61"},{ name: "Edit_Build copy 6", id: "icon-62"},{ name: "Folder_Build copy 6", id: "icon-63"},{ name: "Garbage_Build copy 6", id: "icon-64"},{ name: "Heart_Build copy 6", id: "icon-65"},{ name: "Home_Build copy 6", id: "icon-66"},{ name: "Laptop_Build copy 6", id: "icon-67"},{ name: "Printer_Build copy 6", id: "icon-68"},{ name: "Redo_Build copy 6", id: "icon-69"},{ name: "Repeat_Build copy 6", id: "icon-70"},{ name: "Cart_Build copy 7", id: "icon-71"},{ name: "Edit_Build copy 7", id: "icon-72"},{ name: "Folder_Build copy 7", id: "icon-73"},{ name: "Garbage_Build copy 7", id: "icon-74"},{ name: "Heart_Build copy 7", id: "icon-75"},{ name: "Home_Build copy 7", id: "icon-76"},{ name: "Laptop_Build copy 7", id: "icon-77"},{ name: "Printer_Build copy 7", id: "icon-78"},{ name: "Redo_Build copy 7", id: "icon-79"},{ name: "Repeat_Build copy 7", id: "icon-80"},{ name: "Cart_Build copy 8", id: "icon-81"},{ name: "Edit_Build copy 8", id: "icon-82"},{ name: "Folder_Build copy 8", id: "icon-83"},{ name: "Garbage_Build copy 8", id: "icon-84"},{ name: "Heart_Build copy 8", id: "icon-85"},{ name: "Home_Build copy 8", id: "icon-86"},{ name: "Laptop_Build copy 8", id: "icon-87"},{ name: "Printer_Build copy 8", id: "icon-88"},{ name: "Redo_Build copy 8", id: "icon-89"},{ name: "Repeat_Build copy 8", id: "icon-90"},{ name: "Cart_Build copy 9", id: "icon-91"},{ name: "Edit_Build copy 9", id: "icon-92"},{ name: "Folder_Build copy 9", id: "icon-93"},{ name: "Garbage_Build copy 9", id: "icon-94"},{ name: "Heart_Build copy 9", id: "icon-95"},{ name: "Home_Build copy 9", id: "icon-96"},{ name: "Laptop_Build copy 9", id: "icon-97"},{ name: "Printer_Build copy 9", id: "icon-98"},{ name: "Redo_Build copy 9", id: "icon-99"},{ name: "Repeat_Build copy 9", id: "icon-100"}]
-const gridJson = {name: "Test_Grid", id: "grid-container"}
+const gridJson = {name: "Test_Grid", id: "grid-container"};
+const browserJSON = [];
+const exportJSON = [];
 
 function playFile(file) {
   let animation = lottie.loadAnimation({
@@ -10,17 +12,150 @@ function playFile(file) {
     autoplay: true,
     name: `${file.name} Animation`,
   });
-
-
 }
+
 function setName(file) {
   $(`#${file.id}`).attr(`data-name`, `${file.name}`);
 }
 
-function adjustTop() {
-  let lottieHeight = $("#lottie-player").css("height");
-  $(".lottie-grid").css(`top`, `-${lottieHeight}`);
+function makeObject(file) {
+  $.getJSON(`json/${file.name}.json`, function(obj) {
+    browserJSON.push(obj);
+    return obj;
+  });
 }
+function createJSON(file) {
+  let json = JSON.stringify(file);
+  exportJSON.push(json);
+  console.log(exportJSON);
+}
+
+
+function editJSON(file, lottieColor, scaleStrokeDuration) {
+    file.op = 30;
+
+    let $scale = scaleStrokeDuration[0],
+    $stroke = (scaleStrokeDuration[1].replace("pt",""))*20,
+    $height = parseInt(scaleStrokeDuration[0].replace("px","")),
+    $outputheight = (($height/24)*100).toFixed(2),
+    $jsonsize = [$outputheight, $outputheight, 100],
+    $color = lottieColor,
+    $duration = scaleStrokeDuration[2].replace("ms",""),
+    $framerate = parseFloat(((file.op/$duration)*1000), 10);
+
+    $framerate = Math.round($framerate * 1e2) / 1e2;
+
+    file.fr = $framerate;
+    file.layers[0].ks["s"].k = $jsonsize;
+    file.h = $height;
+    file.w = $height;
+
+    // Current JSON paths:
+    switch (file.nm) {
+      case "Cart_Build_03":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[1].it[1].c.k = $color;
+          file.layers[1].shapes[2].it[1].c.k = $color;
+          file.layers[1].shapes[3].it[1].c.k = $color;
+          file.layers[1].shapes[7].w.k = $stroke;
+        break;
+      case "Edit_Build_02":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[6].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[6].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Folder_Build_03":
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[1].shapes[1].w.k = $stroke;
+          file.layers[2].shapes[1].w.k = $stroke;
+        break;
+      case "Garbage_Build_05":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[1].it[1].c.k = $color;
+          file.layers[1].shapes[2].it[1].c.k = $color;
+          file.layers[1].shapes[3].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[1].shapes[1].it[1].w.k = $stroke;
+          file.layers[1].shapes[2].it[1].w.k = $stroke;
+          file.layers[1].shapes[3].it[1].w.k = $stroke;
+        break;
+      case "Heart_Build_03":
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[1].shapes[1].w.k = $stroke;
+        break;
+      case "Home_Build_06":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Laptop_Build_04":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[1].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[1].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[1].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[1].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[1].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[1].it[1].w.k = $stroke;
+        break;
+      case "Printer_Build_02":
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[6].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[6].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Redo_Build_02":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Repeat_Build_02":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[7].shapes[0].it[1].c.k = $color;
+          file.layers[8].shapes[0].it[1].c.k = $color;
+          file.layers[9].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[7].shapes[0].it[1].w.k = $stroke;
+          file.layers[8].shapes[0].it[1].w.k = $stroke;
+          file.layers[9].shapes[0].it[1].w.k = $stroke;
+        break;
+
+      default:
+
+    }
+}
+
+
 
 function setColor() {
   let $hue = $("#hueID").val(),
@@ -61,7 +196,6 @@ function setColor() {
   }
 
   function rgbatolottie(h,s,l){
-    // Must be fractions of 1
     s /= 100;
     l /= 100;
 
@@ -88,16 +222,17 @@ function setColor() {
     r = Math.round((r + m) * 255);
     g = Math.round((g + m) * 255);
     b = Math.round((b + m) * 255);
-    let lottieR = (r/255).toFixed(2);
-    let lottieG = (g/255).toFixed(2);
-    let lottieB = (b/255).toFixed(2);
 
-    return `[${lottieR},${lottieG},${lottieB}, 1]`;
+    let r_converted = (r/255).toFixed(2),
+    g_converted = (g/255).toFixed(2),
+    b_converted = (b/255).toFixed(2),
+    lottieR = parseFloat(r_converted),
+    lottieG = parseFloat(g_converted),
+    lottieB = parseFloat(b_converted);
+
+    return [lottieR,lottieG,lottieB, 1];
 
   }
-
-  // $lottieColor will be applied to the new JSON files
-
 
   function hslToHex(h,s,l) {
     s /= 100;
@@ -139,47 +274,72 @@ function setColor() {
     return "#" + r + g + b;
   }
 
-  let $colorrgba = hslToRgb($hue,$saturation,$lightness),
-  $lottieColor = rgbatolottie($hue, $saturation, $lightness),
-  $colorhex = hslToHex($hue,$saturation,$lightness),
+  let $lottieColor = rgbatolottie($hue, $saturation, $lightness),
   $fill = $(".fill"),
   $stroke = $(".stroke"),
   $saturationBar = $("#visibleSaturation"),
   $lightnessBar = $("#visibleLightness");
 
+
   $fill.add($stroke).css({stroke: `${$hsl}`, fill: `${$hsl}`})
   $saturationBar.css(`background`, `linear-gradient(to right, hsl(${$hue}, 10%, 0%), hsl(${$hue}, 20%, 50%), hsl(${$hue}, 30%, 50%), hsl(${$hue}, 40%, 50%), hsl(${$hue}, 50%, 50%), hsl(${$hue}, 60%, 50%), hsl(${$hue}, 70%, 50%), hsl(${$hue}, 80%, 50%), hsl(${$hue}, 90%, 50%), hsl(${$hue}, 100%, 50%))`);
   $lightnessBar.css(`background`, `linear-gradient(to right, hsl(${$hue}, 100%, 0%), hsl(${$hue}, 100%, 20%), hsl(${$hue}, 100%, 30%), hsl(${$hue}, 100%, 40%), hsl(${$hue}, 100%, 50%), hsl(${$hue}, 100%, 60%), hsl(${$hue}, 100%, 70%), hsl(${$hue}, 100%, 80%),hsl(${$hue}, 100%, 90%), hsl(${$hue}, 100%, 100%))`);
+
+  return $lottieColor;
 
 }
 
 function setScaleStrokeDuration() {
   let $scale = `${$("#scale").val()}px`,
+  $maxstroke = (($("#scale").val()) / 12).toFixed(2);
+  $maxscale = (($("#stroke").val()) * 12),
   $stroke = `${$("#stroke").val()}pt`,
-  $duration = `${$("#duration").val()}ms`;
+  $duration = `${$("#duration").val()}ms`;;
+
+  if ($("#scale").val() < $("#stroke").val() * 11.99) {
+    $("#scale").val($maxscale);
+    $("#scaleOutputId").val($("#scale").val());
+  }
+  if ($("#stroke").val() > $("#scale").val() / 11.99) {
+    $(`#stroke`).val($maxstroke);
+    $("#strokeOutputId").val($("#stroke").val());
+  }
+
+
+
+  return [$scale, $stroke, $duration]
 
 }
 
 $('input').on('input', function() {
-  setColor();
-  setScaleStrokeDuration();
+  let lottieColor = setColor(),
+  scaleStrokeDuration = setScaleStrokeDuration();
+
 });
+
+$("#render").click(function(){
+  let lottieColor = setColor(),
+  scaleStrokeDuration = setScaleStrokeDuration();
+  browserJSON.forEach(function(file) {
+    editJSON(file, lottieColor, scaleStrokeDuration);
+  });
+  // console.log(browserJSON);
+  browserJSON.forEach(createJSON);
+
+})
 
 $(document).ready(function() {
 
-
-  // lottieFiles.forEach(playFile);
   lottieFiles.forEach(setName);
-  playFile(gridJson)
-  // add a .then(adjustTop();)
+  lottieFiles.forEach(makeObject);
+
+
+  playFile(gridJson);
 
   $(".icon").click(function(event) {
 
-    let iconID = event.currentTarget.id,
-    jsonName = event.currentTarget.attributes[2].value;
+    let iconID = event.currentTarget.id;
 
-    // Get data-name value from the object I click
-    // pass that value into the path name, instead of looping through the objects
     function playFilePreview(div) {
       if (div.id == iconID) {
         $("#preview").empty();
@@ -194,14 +354,8 @@ $(document).ready(function() {
         })
       }
 
-      $.getJSON(`json/${div.name}.json`, function(obj) {
-        // console.log(obj);
-        // https://github.com/sonaye/lottie-editor/blob/dev/src/components/Root.js#L119-L124
-
-      });
       // Return a promise here, will allow .then(setColor()) function to run after and apply itself to the svg
     }
-    // lottieFiles.find(playFilePreview).then(setColor());
     lottieFiles.find(playFilePreview);
   })
 
