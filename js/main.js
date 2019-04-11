@@ -1,7 +1,9 @@
-const lottieFiles = [{ name: "Cart_Build", id: "icon-1"},{ name: "Edit_Build", id: "icon-2"},{ name: "Folder_Build", id: "icon-3"},{ name: "Garbage_Build", id: "icon-4"},{ name: "Heart_Build", id: "icon-5"},{ name: "Home_Build", id: "icon-6"},{ name: "Laptop_Build", id: "icon-7"},{ name: "Printer_Build", id: "icon-8"},{ name: "Redo_Build", id: "icon-9"},{ name: "Repeat_Build", id: "icon-10"},{ name: "Cart_Build copy", id: "icon-11"},{ name: "Edit_Build copy", id: "icon-12"},{ name: "Folder_Build copy", id: "icon-13"},{ name: "Garbage_Build copy", id: "icon-14"},{ name: "Heart_Build copy", id: "icon-15"},{ name: "Home_Build copy", id: "icon-16"},{ name: "Laptop_Build copy", id: "icon-17"},{ name: "Printer_Build copy", id: "icon-18"},{ name: "Redo_Build copy", id: "icon-19"},{ name: "Repeat_Build copy", id: "icon-20"},{ name: "Cart_Build copy 2", id: "icon-21"},{ name: "Edit_Build copy 2", id: "icon-22"},{ name: "Folder_Build copy 2", id: "icon-23"},{ name: "Garbage_Build copy 2", id: "icon-24"},{ name: "Heart_Build copy 2", id: "icon-25"},{ name: "Home_Build copy 2", id: "icon-26"},{ name: "Laptop_Build copy 2", id: "icon-27"},{ name: "Printer_Build copy 2", id: "icon-28"},{ name: "Redo_Build copy 2", id: "icon-29"},{ name: "Repeat_Build copy 2", id: "icon-30"},{ name: "Cart_Build copy 3", id: "icon-31"},{ name: "Edit_Build copy 3", id: "icon-32"},{ name: "Folder_Build copy 3", id: "icon-33"},{ name: "Garbage_Build copy 3", id: "icon-34"},{ name: "Heart_Build copy 3", id: "icon-35"},{ name: "Home_Build copy 3", id: "icon-36"},{ name: "Laptop_Build copy 3", id: "icon-37"},{ name: "Printer_Build copy 3", id: "icon-38"},{ name: "Redo_Build copy 3", id: "icon-39"},{ name: "Repeat_Build copy 3", id: "icon-40"},{ name: "Cart_Build copy 4", id: "icon-41"},{ name: "Edit_Build copy 4", id: "icon-42"},{ name: "Folder_Build copy 4", id: "icon-43"},{ name: "Garbage_Build copy 4", id: "icon-44"},{ name: "Heart_Build copy 4", id: "icon-45"},{ name: "Home_Build copy 4", id: "icon-46"},{ name: "Laptop_Build copy 4", id: "icon-47"},{ name: "Printer_Build copy 4", id: "icon-48"},{ name: "Redo_Build copy 4", id: "icon-49"},{ name: "Repeat_Build copy 4", id: "icon-50"},{ name: "Cart_Build copy 5", id: "icon-51"},{ name: "Edit_Build copy 5", id: "icon-52"},{ name: "Folder_Build copy 5", id: "icon-53"},{ name: "Garbage_Build copy 5", id: "icon-54"},{ name: "Heart_Build copy 5", id: "icon-55"},{ name: "Home_Build copy 5", id: "icon-56"},{ name: "Laptop_Build copy 5", id: "icon-57"},{ name: "Printer_Build copy 5", id: "icon-58"},{ name: "Redo_Build copy 5", id: "icon-59"},{ name: "Repeat_Build copy 5", id: "icon-60"},{ name: "Cart_Build copy 6", id: "icon-61"},{ name: "Edit_Build copy 6", id: "icon-62"},{ name: "Folder_Build copy 6", id: "icon-63"},{ name: "Garbage_Build copy 6", id: "icon-64"},{ name: "Heart_Build copy 6", id: "icon-65"},{ name: "Home_Build copy 6", id: "icon-66"},{ name: "Laptop_Build copy 6", id: "icon-67"},{ name: "Printer_Build copy 6", id: "icon-68"},{ name: "Redo_Build copy 6", id: "icon-69"},{ name: "Repeat_Build copy 6", id: "icon-70"},{ name: "Cart_Build copy 7", id: "icon-71"},{ name: "Edit_Build copy 7", id: "icon-72"},{ name: "Folder_Build copy 7", id: "icon-73"},{ name: "Garbage_Build copy 7", id: "icon-74"},{ name: "Heart_Build copy 7", id: "icon-75"},{ name: "Home_Build copy 7", id: "icon-76"},{ name: "Laptop_Build copy 7", id: "icon-77"},{ name: "Printer_Build copy 7", id: "icon-78"},{ name: "Redo_Build copy 7", id: "icon-79"},{ name: "Repeat_Build copy 7", id: "icon-80"},{ name: "Cart_Build copy 8", id: "icon-81"},{ name: "Edit_Build copy 8", id: "icon-82"},{ name: "Folder_Build copy 8", id: "icon-83"},{ name: "Garbage_Build copy 8", id: "icon-84"},{ name: "Heart_Build copy 8", id: "icon-85"},{ name: "Home_Build copy 8", id: "icon-86"},{ name: "Laptop_Build copy 8", id: "icon-87"},{ name: "Printer_Build copy 8", id: "icon-88"},{ name: "Redo_Build copy 8", id: "icon-89"},{ name: "Repeat_Build copy 8", id: "icon-90"},{ name: "Cart_Build copy 9", id: "icon-91"},{ name: "Edit_Build copy 9", id: "icon-92"},{ name: "Folder_Build copy 9", id: "icon-93"},{ name: "Garbage_Build copy 9", id: "icon-94"},{ name: "Heart_Build copy 9", id: "icon-95"},{ name: "Home_Build copy 9", id: "icon-96"},{ name: "Laptop_Build copy 9", id: "icon-97"},{ name: "Printer_Build copy 9", id: "icon-98"},{ name: "Redo_Build copy 9", id: "icon-99"},{ name: "Repeat_Build copy 9", id: "icon-100"}]
+const lottieFiles = [{ name: "Alarm_Clock_Build", id: "icon-1"},{ name: "Attach_Build", id: "icon-2"},{ name: "Audio_Build", id: "icon-3"},{ name: "Bookmark_Build", id: "icon-4"},{ name: "Calendar_Build", id: "icon-5"},{ name: "Camera_Build", id: "icon-6"},{ name: "Cart_Build_Add", id: "icon-7"},{ name: "Cart_Build", id: "icon-8"},{ name: "Cast_Build", id: "icon-9"},{ name: "Check_Build", id: "icon-10"},{ name: "Chevron_Down_Build", id: "icon-11"},{ name: "Chevron_Left_Build", id: "icon-12"},{ name: "Chevron_Right_Build", id: "icon-13"},{ name: "Chevron_Up_Build", id: "icon-14"},{ name: "Cloud_Build", id: "icon-15"},{ name: "DirectionalPad_Build", id: "icon-16"},{ name: "Document_Build", id: "icon-17"},{ name: "Dots_Horizontal_Build", id: "icon-18"},{ name: "Dots_Vertical_Build", id: "icon-19"},{ name: "Edit_Build", id: "icon-20"},{ name: "Eye_Build", id: "icon-21"},{ name: "Eye_Off_Build", id: "icon-22"},{ name: "Folder_Build", id: "icon-23"},{ name: "Garbage_Build", id: "icon-24"},{ name: "Heart_Build", id: "icon-25"},{ name: "Home_Build", id: "icon-26"},{ name: "Image_Add_Build", id: "icon-27"},{ name: "Image_Build", id: "icon-28"},{ name: "Info_Build", id: "icon-29"},{ name: "Laptop_Build", id: "icon-30"},{ name: "Link_Build", id: "icon-31"},{ name: "Mail_Build", id: "icon-32"},{ name: "Maximize_Build", id: "icon-33"},{ name: "Microphone_Build", id: "icon-34"},{ name: "Microphone_Off_Build", id: "icon-35"},{ name: "Minimize_Build", id: "icon-36"},{ name: "Pencil_Build", id: "icon-37"},{ name: "Printer_Build", id: "icon-38"},{ name: "Redo_Build", id: "icon-39"},{ name: "Repeat_Build", id: "icon-40"},{ name: "Alarm_Clock_Build copy", id: "icon-41"},{ name: "Attach_Build copy", id: "icon-42"},{ name: "Audio_Build copy", id: "icon-43"},{ name: "Bookmark_Build copy", id: "icon-44"},{ name: "Calendar_Build copy", id: "icon-45"},{ name: "Camera_Build copy", id: "icon-46"},{ name: "Cart_Build_Add copy", id: "icon-47"},{ name: "Cart_Build copy", id: "icon-48"},{ name: "Cast_Build copy", id: "icon-49"},{ name: "Check_Build copy", id: "icon-50"},{ name: "Chevron_Down_Build copy", id: "icon-51"},{ name: "Chevron_Left_Build copy", id: "icon-52"},{ name: "Chevron_Right_Build copy", id: "icon-53"},{ name: "Chevron_Up_Build copy", id: "icon-54"},{ name: "Cloud_Build copy", id: "icon-55"},{ name: "DirectionalPad_Build copy", id: "icon-56"},{ name: "Document_Build copy", id: "icon-57"},{ name: "Dots_Horizontal_Build copy", id: "icon-58"},{ name: "Dots_Vertical_Build copy", id: "icon-59"},{ name: "Edit_Build copy", id: "icon-60"},{ name: "Eye_Build copy", id: "icon-61"},{ name: "Eye_Off_Build copy", id: "icon-62"},{ name: "Folder_Build copy", id: "icon-63"},{ name: "Garbage_Build copy", id: "icon-64"},{ name: "Heart_Build copy", id: "icon-65"},{ name: "Home_Build copy", id: "icon-66"},{ name: "Image_Add_Build copy", id: "icon-67"},{ name: "Image_Build copy", id: "icon-68"},{ name: "Info_Build copy", id: "icon-69"},{ name: "Laptop_Build copy", id: "icon-70"},{ name: "Link_Build copy", id: "icon-71"},{ name: "Mail_Build copy", id: "icon-72"},{ name: "Maximize_Build copy", id: "icon-73"},{ name: "Microphone_Build copy", id: "icon-74"},{ name: "Microphone_Off_Build copy", id: "icon-75"},{ name: "Minimize_Build copy", id: "icon-76"},{ name: "Pencil_Build copy", id: "icon-77"},{ name: "Printer_Build copy", id: "icon-78"},{ name: "Redo_Build copy", id: "icon-79"},{ name: "Repeat_Build copy", id: "icon-80"},{ name: "Alarm_Clock_Build copy 2", id: "icon-81"},{ name: "Attach_Build copy 2", id: "icon-82"},{ name: "Audio_Build copy 2", id: "icon-83"},{ name: "Bookmark_Build copy 2", id: "icon-84"},{ name: "Calendar_Build copy 2", id: "icon-85"},{ name: "Camera_Build copy 2", id: "icon-86"},{ name: "Cart_Build_Add copy 2", id: "icon-87"},{ name: "Cart_Build copy 2", id: "icon-88"},{ name: "Cast_Build copy 2", id: "icon-89"},{ name: "Check_Build copy 2", id: "icon-90"},{ name: "Chevron_Down_Build copy 2", id: "icon-91"},{ name: "Chevron_Left_Build copy 2", id: "icon-92"},{ name: "Chevron_Right_Build copy 2", id: "icon-93"},{ name: "Chevron_Up_Build copy 2", id: "icon-94"},{ name: "Cloud_Build copy 2", id: "icon-95"},{ name: "DirectionalPad_Build copy 2", id: "icon-96"},{ name: "Document_Build copy 2", id: "icon-97"},{ name: "Dots_Horizontal_Build copy 2", id: "icon-98"},{ name: "Dots_Vertical_Build copy 2", id: "icon-99"},{ name: "Edit_Build copy 2", id: "icon-100"}]
 const gridJson = {name: "Test_Grid", id: "grid-container"};
-const browserJSON = [];
-const exportJSON = [];
+let browserJSON = [];
+let exportJSON = [];
+
+
 
 function playFile(file) {
   let animation = lottie.loadAnimation({
@@ -24,15 +26,32 @@ function makeObject(file) {
     return obj;
   });
 }
+
 function createJSON(file) {
   let json = JSON.stringify(file);
   exportJSON.push(json);
   return json;
 }
 
+function downloadZip() {
+  var zip = new JSZip();
+  // var jsonFOlder = zip.folder("json");
+    for (var file = 0; file < exportJSON.length; file++) {
+      debugger;
+      zip.file(`${lottieFiles[file].name}.json`, `${exportJSON[file]}`);
+      debugger;
+    }
+    // zip.file(`${file.nm}.json`, `${file}`);
+    zip.generateAsync({type:"blob"})
+    .then(function(content) {
+    // see FileSaver.js
+    saveAs(content, "exportedjson.zip");
+    });
+}
 
 function editJSON(file, lottieColor, scaleStrokeDuration) {
     file.op = 30;
+
 
     let $scale = scaleStrokeDuration[0],
     $stroke = (scaleStrokeDuration[1].replace("pt",""))*20,
@@ -52,88 +71,311 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
 
     // Current JSON paths:
     switch (file.nm) {
-      case "Cart_Build_03":
+      case "Alarm_Clock_Build":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[3].c.k = $color;
+          file.layers[4].shapes[2].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[3].w.k = $stroke;
+          file.layers[4].shapes[2].w.k = $stroke;
+        break;
+      case "Attach_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Audio_Build":
+          file.layers[1].shapes[5].c.k = $color;
+          file.layers[1].shapes[5].w.k = $stroke;
+        break;
+      case "Bookmark_Build":
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[1].shapes[1].w.k = $stroke;
+        break;
+      case "Calendar_Build":
+          file.layers[2].shapes[2].c.k = $color;
+          file.layers[3].shapes[1].c.k = $color;
+          file.layers[4].shapes[1].c.k = $color;
+          file.layers[5].shapes[1].c.k = $color;
+          file.layers[6].shapes[1].c.k = $color;
+          file.layers[2].shapes[2].w.k = $stroke;
+          file.layers[3].shapes[1].w.k = $stroke;
+          file.layers[4].shapes[1].w.k = $stroke;
+          file.layers[5].shapes[1].w.k = $stroke;
+          file.layers[6].shapes[1].w.k = $stroke;
+        break;
+      case "Camera_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[1].it[1].c.k = $color;
+          file.layers[1].shapes[2].it[1].c.k = $color;
+          file.layers[1].shapes[2].it[2].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[1].shapes[1].it[1].w.k = $stroke;
+          file.layers[1].shapes[2].it[2].w.k = $stroke;
+        break;
+      case "Cart_Add_Build":
+          file.layers[1].shapes[2].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[1].it[1].c.k = $color;
+          file.layers[2].shapes[2].it[1].c.k = $color;
+          file.layers[2].shapes[3].it[1].c.k = $color;
+          file.layers[2].shapes[6].c.k = $color;
+          file.layers[3].shapes[2].c.k = $color;
+          file.layers[1].shapes[2].w.k = $stroke;
+          file.layers[2].shapes[6].w.k = $stroke;
+          file.layers[3].shapes[2].w.k = $stroke;
+        break;
+      case "Cart_Build":
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[1].shapes[1].it[1].c.k = $color;
           file.layers[1].shapes[2].it[1].c.k = $color;
           file.layers[1].shapes[3].it[1].c.k = $color;
+          file.layers[1].shapes[7].c.k = $color;
           file.layers[1].shapes[7].w.k = $stroke;
         break;
-      case "Edit_Build_02":
+      case "Cast_Build":
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[3].shapes[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[3].shapes[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Check_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Chevron_Down_Build":
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[1].shapes[1].w.k = $stroke;
+        break;
+      case "Chevron_Left_Build":
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[1].shapes[1].w.k = $stroke;
+        break;
+      case "Chevron_Right_Build":
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[2].shapes[1].w.k = $stroke;
+        break;
+      case "Chevron_Up_Build":
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[1].shapes[1].w.k = $stroke;
+        break;
+      case "Cloud_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "DirectionalPad_Build":
+          file.layers[1].shapes[2].c.k = $color;
           file.layers[2].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
           file.layers[5].shapes[0].it[1].c.k = $color;
-          file.layers[6].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[2].w.k = $stroke;
           file.layers[2].shapes[0].it[1].w.k = $stroke;
           file.layers[3].shapes[0].it[1].w.k = $stroke;
           file.layers[4].shapes[0].it[1].w.k = $stroke;
           file.layers[5].shapes[0].it[1].w.k = $stroke;
-          file.layers[6].shapes[0].it[1].w.k = $stroke;
         break;
-      case "Folder_Build_03":
+      case "Document_Build":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Dots_Horizontal_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[2].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[2].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[2].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Dots_Vertical_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[2].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[2].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[2].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Edit_Build":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[6].shapes[8].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[6].shapes[8].w.k = $stroke;
+        break;
+      case "Eye_Build":
           file.layers[1].shapes[1].c.k = $color;
           file.layers[2].shapes[1].c.k = $color;
           file.layers[1].shapes[1].w.k = $stroke;
           file.layers[2].shapes[1].w.k = $stroke;
         break;
-      case "Garbage_Build_05":
+      case "Eye_Off_Build":
+          file.layers[1].shapes[1].c.k = $color;
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[3].shapes[1].c.k = $color;
+          file.layers[1].shapes[1].w.k = $stroke;
+          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[3].shapes[1].w.k = $stroke;
+        break;
+      case "Folder_Build":
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[3].shapes[1].c.k = $color;
+          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[3].shapes[1].w.k = $stroke;
+        break;
+      case "Garbage_Build":
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[1].shapes[1].it[1].c.k = $color;
           file.layers[1].shapes[2].it[1].c.k = $color;
           file.layers[1].shapes[3].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[1].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[1].shapes[0].it[1].w.k = $stroke;
           file.layers[1].shapes[1].it[1].w.k = $stroke;
           file.layers[1].shapes[2].it[1].w.k = $stroke;
           file.layers[1].shapes[3].it[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[1].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
         break;
-      case "Heart_Build_03":
+      case "Heart_Build":
           file.layers[1].shapes[1].c.k = $color;
           file.layers[1].shapes[1].w.k = $stroke;
         break;
-      case "Home_Build_06":
+      case "Home_Build":
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[2].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
-          file.layers[5].shapes[0].it[1].c.k = $color;
           file.layers[1].shapes[0].it[1].w.k = $stroke;
           file.layers[2].shapes[0].it[1].w.k = $stroke;
           file.layers[3].shapes[0].it[1].w.k = $stroke;
           file.layers[4].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Image_Add_Build":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[1].it[1].c.k = $color;
+          file.layers[3].shapes[2].c.k = $color;
+          file.layers[4].shapes[2].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[2].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[2].w.k = $stroke;
+          file.layers[4].shapes[2].w.k = $stroke;
           file.layers[5].shapes[0].it[1].w.k = $stroke;
         break;
-      case "Laptop_Build_04":
+      case "Image_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[1].it[1].c.k = $color;
+          file.layers[1].shapes[2].c.k = $color;
           file.layers[2].shapes[0].it[1].c.k = $color;
-          file.layers[2].shapes[1].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
-          file.layers[3].shapes[1].it[1].c.k = $color;
-          file.layers[3].shapes[0].it[1].c.k = $color;
-          file.layers[3].shapes[1].it[1].c.k = $color;
+          file.layers[1].shapes[2].w.k = $stroke;
           file.layers[2].shapes[0].it[1].w.k = $stroke;
-          file.layers[2].shapes[1].it[1].w.k = $stroke;
           file.layers[3].shapes[0].it[1].w.k = $stroke;
-          file.layers[3].shapes[1].it[1].w.k = $stroke;
-          file.layers[3].shapes[0].it[1].w.k = $stroke;
-          file.layers[3].shapes[1].it[1].w.k = $stroke;
         break;
-      case "Printer_Build_02":
+      case "Info_Build":
           file.layers[2].shapes[1].c.k = $color;
+          file.layers[3].shapes[2].c.k = $color;
+          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[3].shapes[2].w.k = $stroke;
+        break;
+      case "Laptop_Build":
+          file.layers[2].shapes[2].c.k = $color;
+          file.layers[2].shapes[2].w.k = $stroke;
+        break;
+      case "Link_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[1].w.k = $stroke;
+        break;
+      case "Mail_Build":
+          file.layers[2].shapes[0].it[2].c.k = $color;
+          file.layers[3].shapes[0].it[2].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
           file.layers[5].shapes[0].it[1].c.k = $color;
           file.layers[6].shapes[0].it[1].c.k = $color;
-          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[2].shapes[0].it[2].w.k = $stroke;
+          file.layers[3].shapes[0].it[2].w.k = $stroke;
           file.layers[4].shapes[0].it[1].w.k = $stroke;
           file.layers[5].shapes[0].it[1].w.k = $stroke;
           file.layers[6].shapes[0].it[1].w.k = $stroke;
         break;
-      case "Redo_Build_02":
-          file.layers[2].shapes[0].it[1].c.k = $color;
+      case "Maximize_Build":
+          file.layers[1].shapes[4].c.k = $color;
+          file.layers[1].shapes[4].w.k = $stroke;
+        break;
+      case "Microphone_Build":
+          file.layers[2].shapes[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
-          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[2].shapes[1].w.k = $stroke;
           file.layers[3].shapes[0].it[1].w.k = $stroke;
         break;
-      case "Repeat_Build_02":
+      case "Microphone_Off_Build":
+          file.layers[1].shapes[0].it[2].c.k = $color;
+          file.layers[2].shapes[2].c.k = $color;
+          file.layers[3].shapes[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[2].c.k = $color;
+          file.layers[1].shapes[0].it[2].w.k = $stroke;
+          file.layers[2].shapes[2].w.k = $stroke;
+          file.layers[3].shapes[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[2].w.k = $stroke;
+        break;
+      case "Minimize_Build":
+          file.layers[1].shapes[4].c.k = $color;
+          file.layers[1].shapes[4].w.k = $stroke;
+        break;
+      case "Pencil_Build":
+          file.layers[2].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Printer_Build":
+          file.layers[2].shapes[1].c.k = $color;
+          file.layers[3].shapes[1].c.k = $color;
+          file.layers[4].shapes[0].it[1].c.k = $color;
+          file.layers[5].shapes[0].it[1].c.k = $color;
+          file.layers[6].shapes[0].it[1].c.k = $color;
+          file.layers[2].shapes[1].w.k = $stroke;
+          file.layers[3].shapes[1].w.k = $stroke;
+          file.layers[4].shapes[0].it[1].w.k = $stroke;
+          file.layers[5].shapes[0].it[1].w.k = $stroke;
+          file.layers[6].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Redo_Build":
+          file.layers[1].shapes[0].it[1].c.k = $color;
+          file.layers[3].shapes[0].it[1].c.k = $color;
+          file.layers[1].shapes[0].it[1].w.k = $stroke;
+          file.layers[3].shapes[0].it[1].w.k = $stroke;
+        break;
+      case "Repeat_Build":
           file.layers[1].shapes[0].it[1].c.k = $color;
           file.layers[3].shapes[0].it[1].c.k = $color;
           file.layers[4].shapes[0].it[1].c.k = $color;
@@ -154,8 +396,6 @@ function editJSON(file, lottieColor, scaleStrokeDuration) {
 
     }
 }
-
-
 
 function setColor() {
   let $hue = $("#hueID").val(),
@@ -323,9 +563,13 @@ $("#render").click(function(){
   browserJSON.forEach(function(file) {
     editJSON(file, lottieColor, scaleStrokeDuration);
   });
-  // console.log(browserJSON);
   browserJSON.forEach(createJSON);
-
+  // setTimeout(function(){
+  //   alert("2000ms");
+  //   downloadZip();
+  //
+  // },2000)
+  downloadZip();
 })
 
 $(document).ready(function() {
