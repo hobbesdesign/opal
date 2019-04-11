@@ -280,7 +280,7 @@
                   <span><input name="strokeOutputName" id="strokeOutputId" oninput="stroke.value = strokeOutputId.value" onchange="stroke.value = strokeOutputId.value"></input>pt</span>
                 </span>
                 </br>
-                <input type="range" name="stroke" id="stroke" required min="1" max="90" oninput="strokeOutputId.value = stroke.value" onchange="strokeOutputId.value = stroke.value"/>
+                <input type="range" name="stroke" id="stroke" required min="1" max="90" value="1" oninput="strokeOutputId.value = stroke.value" onchange="strokeOutputId.value = stroke.value"/>
 
               </div>
               <div class="duration-edit">
@@ -289,7 +289,7 @@
                   <span><input name="durationOutputName" id="durationOutputId" oninput="duration.value = durationOutputId.value"></input>ms</span>
                 </span>
                 </br>
-                <input type="range" name="duration" id="duration" required min="200" max="3000" value="500"  oninput="durationOutputId.value = duration.value"/>
+                <input type="range" name="duration" id="duration" required min="200" max="3000" value="3000"  oninput="durationOutputId.value = duration.value"/>
               </div>
             </fieldset>
               <button type="submit" id="render">Render <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></button>
@@ -303,6 +303,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.4/lottie.min.js"></script>
+    <script src="../js/jszip.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
