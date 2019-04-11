@@ -35,16 +35,16 @@ function createJSON(file) {
 
 function downloadZip() {
   var zip = new JSZip();
-  // var jsonFOlder = zip.folder("json");
+
     for (var file = 0; file < exportJSON.length; file++) {
       debugger;
       zip.file(`${lottieFiles[file].name}.json`, `${exportJSON[file]}`);
       debugger;
     }
-    // zip.file(`${file.nm}.json`, `${file}`);
+    
     zip.generateAsync({type:"blob"})
     .then(function(content) {
-    // see FileSaver.js
+    
     saveAs(content, "exportedjson.zip");
     });
 }
